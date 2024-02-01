@@ -1,0 +1,191 @@
+.add-button {
+    max-width: 1250px;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
+
+    button {
+        padding: 22px 35px;
+        border-radius: 100%;
+        font-size: 44px;
+        border: none;
+        background-color: #6C63FF;
+        color: white;
+    }
+}
+
+.modal {
+    position: fixed;
+    z-index: 5;
+    top: 20%;
+    left: 35%;
+    width: 500px;
+    height: 300px;
+    display: none;
+    background-color: white;
+    border-radius: 12px;
+
+    &-title {
+        text-align: center;
+        font-size: 18px;
+        font-style: italic;
+    }
+
+    &-input {
+        input {
+            width: 444px;
+            height: 35px;
+            padding: 0px 15px 0px 12px;
+            border: 1px solid #6C63FF;
+            border-radius: 6px;
+            outline: #6C63FF;
+        }
+
+    }
+
+    &-buttons {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 120px;
+
+        button {
+            font-weight: bold;
+        }
+    }
+
+    &-container {
+        padding: 12px 14px;
+    }
+}
+
+.cancel {
+    padding: 12px 15px;
+    border: 1px solid #6C63FF;
+    background-color: white;
+    border-radius: 6px;
+    color: #6C63FF;
+
+}
+
+.apply {
+    padding: 12px 15px;
+    border: 1px solid #6C63FF;
+    background-color: #6C63FF;
+    border-radius: 6px;
+    color: white;
+}
+
+.back-drop {
+    background: rgba(87, 87, 87, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+
+}
+
+
+
+@media (max-width:920px) {
+    .modal {
+        position: fixed;
+        width: 400px;
+        height: 250px;
+        top: 30%;
+        left: 30%;
+    }
+
+    .modal-input {
+        input {
+            width: 350px;
+            height: 25px;
+        }
+    }
+
+    .modal-buttons {
+        padding-top: 80px;
+    }
+
+    .cancel {
+        padding: 8px 10px;
+    }
+
+    .apply {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width:520px) {
+    .modal {
+        position: fixed;
+        width: 300px;
+        height: 200px;
+        top: 25%;
+        left: 13%;
+    }
+
+    .modal-input {
+        input {
+            width: 250px;
+            height: 25px;
+        }
+    }
+
+    .modal-buttons {
+        padding-top: 40px;
+    }
+
+    .cancel {
+        padding: 8px 10px;
+    }
+
+    .apply {
+        padding: 8px 10px;
+    }
+
+    .add-button {
+        button {
+            padding: 14px 30px;
+            border-radius: 100%;
+            font-size: 44px;
+            border: none;
+            background-color: #6C63FF;
+            color: white;
+        }
+    }
+}
+
+
+
+.valid-form{
+    position: absolute;
+    display: none;
+    left:28%;
+    text-align: center;
+        font-size: 24px;
+        color:red;
+}
+
+.active {
+    display: block;
+}
+
+.white-bg-modal{
+    background-color: #1E1E1E;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+}
+
+.white-bg-input{
+    border:1px solid white !important;
+    background-color:#1E1E1E;
+    color:white;
+}
+
+.white-btn{
+        background-color: #1E1E1E;
+}

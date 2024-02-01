@@ -1,0 +1,41 @@
+.main-title {
+    color: var(--black, #252525);
+    font-family: "Kanit", sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+
+#main-title{
+  color:black
+}
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top:50px;
+}
+
+.search-panel-app{
+  display: flex;
+  gap:20px;
+  justify-content: center;
+}
+.night-mode{
+  padding-left:80px;
+}
+
+@media (max-width:520px){
+   .main-title{
+     font-size: 18px;
+   }
+   .night-mode{
+    padding-left: 80px;
+   }
+}
+
+.white{
+  color:white;
+}

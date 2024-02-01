@@ -1,0 +1,52 @@
+.search-panel {
+    input {
+        width: 436px;
+        height: 15px;
+        padding: 14px 25px;
+        border-radius: 5px;
+        border: 1px solid var(--purple, #6C63FF);
+    }
+    input::placeholder{
+        font-family: 'Kanit';
+    }
+
+    .icon {
+        background-image: url('../../img/search.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+}
+
+@media (max-width:520px){
+  .search-panel{
+     input{
+        width:150px;
+        height: 15px;
+        padding: 14px 18px;
+        border-radius: 5px;
+        border: 1px solid var(--purple, #6C63FF);
+     }
+  }
+}
+
+@media (max-width:920px){
+    .search-panel{
+       input{
+          width:auto;
+          height: 15px;
+          padding: 14px 18px;
+          border-radius: 5px;
+          border: 1px solid var(--purple, #6C63FF);
+       }
+    }
+  }
+
+.white-bg{
+    input{
+        background-color: #1E1E1E;
+        border: 1px solid white;
+        color:white;
+    }
+    
+    
+}
