@@ -5,11 +5,13 @@ const ItemTask = (props) => {
     let {name,id,deleteTask,complitedTask,complited,isNight} = props
     const isComplited = complited ? 'task-and-checkbox actived ' : 'task-and-checkbox'
     const isNightTask = isNight ? 'task-name white' : 'task-name'
+
     return (
         <div  className="task">
         <div className={isComplited}>
             <input onClick={() => complitedTask(id)}
             className='checkbox'
+             checked = {complited}
                 type='checkbox'>
                 </input>
             <div className={isNightTask}>

@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React, useState,useTransition } from 'react'
 import SearchPanel from './components/search-panel/SearchPanel';
 import FilterButton from './components/filter-button/FilterButton';
 import NightMode from './components/nightMode/NightMode';
@@ -35,25 +35,25 @@ function App() {
   }
 
   function onSearchTask(items, filter) {
-    if (items.length === 0) {
-      return 
-    }
-    return items.filter(item => {
-      return item.name.indexOf(filter) > -1
-    })
+      if (items.length === 0) {
+        return 
+      }
+      return items.filter(item => {
+        return item.name.indexOf(filter) > -1
+      })
   }
 
   function onFilteredItems(items, term) {
-    switch (term) {
-      case 'All':
-        return items
-      case 'Complated':
-        return items?.filter(item => item.complited)
-      case 'Incomplate':
-        return items?.filter(item => item.complited === false)
-      default:
-        return items
-    }
+      switch (term) {
+        case 'All':
+          return items
+        case 'Complated':
+          return items?.filter(item => item.complited)
+        case 'Incomplate':
+          return items?.filter(item => !item.complited)
+        default:
+          return items
+      }
   }
 
   function updateTerm(term) {
@@ -105,10 +105,9 @@ function App() {
       </div>
       <section className='tasks'>
         <ErrorBoundary>
-          {console.log(SearchListItems)}
-           {SearchListItems?.length === 0  ? <DontFindTask isNight = {isNight}/> : 
+           {SearchListItems?.length === 0 ? <DontFindTask isNight = {isNight}/> : 
           <ItemsList isNight = {isNight} deleteTask={deleteTask} complitedTask={ComplitedOrNo} itemsList={SearchListItems} />
-}
+         }
         </ErrorBoundary>
       </section>
       <div className='add'>
